@@ -1,0 +1,194 @@
+@import "../../../style/variables.scss";
+
+.card-wrapper {
+  .Card-no {
+    width: 100%;
+    padding: 10px;
+    //box-shadow: 2px 2px 2px 2px #f4f2f2;
+    border: 1px solid #DEDEE2;
+    //margin-bottom:15px ;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+  .MM-AA {
+    padding: 10px;
+    // border: 1px solid black;
+  }
+  .CVC {
+    padding: 10px;
+    // border: 1px solid black;
+  }
+  .input {
+    width: 100%;
+    padding: 10px;
+    // box-shadow: 2px 2px 2px 2px #f4f2f2;
+    border: 1px solid #DEDEE2;
+  }
+  .btn-0 {
+    background:linear-gradient(0deg, rgba(56,182,255,1) 4%, rgba(133,1,168,1) 100%);
+    margin: 8px;
+    width: 97%;
+    margin-top: 40px;
+    color: $white;
+    border: none;
+    border-radius: 5px;
+    
+    h3{
+      font-size: 22px !important;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+.main-section {
+  padding: 10px 0px;
+
+  .btn_div {
+    // width: 100%;
+    margin: 0 0 20px 0;
+    padding: 0;
+    text-align: center;
+
+    .btn_button {
+      padding: 5px 15px;
+      background: linear-gradient(180deg, #f467ec 0%, #38b6ff 100%);;
+      font-weight: 500;
+      color: $white;
+      border-radius: 6px;
+      margin: 0 10px;
+      min-width: 110px;
+      display: inline-block;
+      text-align: center;
+      cursor: pointer;
+      
+
+      &:hover {
+        color: $white;
+      }
+
+      img {
+        max-width: 35px;
+        margin-right: 5px;
+      }
+    }
+
+    .btn_button.active,
+    .btn_button:active {
+      background: linear-gradient(0deg, rgba(255,56,56,1) 30%, rgba(133,1,168,1) 100%);
+    }
+  }
+
+  .card_detail {
+    font-size: 20px;
+    font-weight: 400;
+    color: #747474;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .affiliate {
+    text-align: center;
+    color: #747474;
+
+    a {
+      color: #747474;
+    }
+  }
+
+  .submit_btn {
+    width: 100%;
+    padding: 7px 15px;
+    background: linear-gradient(0deg, rgba(56,182,255,1) 4%, rgba(133,1,168,1) 100%);;
+    font-size: 22px;
+    font-weight: 500;
+    color: $white;
+    border-radius: 6px;
+    text-align: center;
+    border: none;
+    margin-top: 10px;
+    color: $white;
+
+    img {
+      max-width: 35px;
+    }
+  }
+
+  .payment_detail {
+    font-size: 19px;
+    font-weight: 400;
+    color: $white;
+    padding: 5px;
+    margin: 5px 0;
+    background: linear-gradient(0deg, rgba(56,182,255,1) 4%, rgba(133,1,168,1) 100%);
+    width: 100%;
+    border-radius: 6px;
+    display: block;
+    line-height: 26px;
+    text-decoration: none;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  .payment_detail:active,
+  .payment_detail.active {
+    background: linear-gradient(0deg, rgba(255,56,56,1) 6%, rgba(133,1,168,1) 100%);
+  }
+}
+.strip-payment-modal {
+  .modal-content {
+    width: 345px !important;
+    margin-left: 15%;
+    background-color: white !important;
+  }
+}
+
+.modal-body{
+  height: 500px !important;
+}
+
+p.card_detail{
+  -webkit-text-fill-color:#747474;
+  color: #747474;
+  text-align: left !important;
+}
+
+.col-6.Coupon {
+  width: 100%;
+  display: flex;
+}
+
+label.coupon-label {
+  width: 68%;
+  text-align: left;
+}
+
+.card-wrapper .btn-0{
+  margin-top: 15px;
+}
+
+.row.p-4.card-detail {
+  padding: 2px !important;
+  margin-bottom: 5px !important;
+}
+
+.input{
+  border-radius: 4px !important;
+  -webkit-border-radius: 4px !important;
+  -moz-border-radius: 4px !important;
+  -ms-border-radius: 4px !important;
+  -o-border-radius: 4px !important;
+}
+
+@media only screen and (max-width: 767px){
+ 
+
+label.coupon-label {
+  width: 73%;
+  text-align: left;
+}
+}

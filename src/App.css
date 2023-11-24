@@ -1,0 +1,295 @@
+import
+  /* "../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css" */
+  .back {
+  border: 1px solid black;
+}
+
+.gradient-border {
+  border: 3px solid !important;
+  border-image: linear-gradient(180deg, #f467ec 0%, #38b6ff 100%) 1 !important;
+}
+.MuiOutlinedInput-root {
+  border-radius: 0px !important;
+  border: 2px solid !important;
+  border-image: linear-gradient(180deg, #f467ec 0%, #38b6ff 100%) 1 !important;
+}
+.gradient-background {
+  background: linear-gradient(180deg, #f467ec 0%, #38b6ff 100%) !important;
+}
+
+.gradient-color {
+  background: -webkit-linear-gradient(
+    180deg,
+    #f467ec 0%,
+    #38b6ff 100%
+  ) !important;
+  /* -webkit-background-clip: text; */
+  -webkit-text-fill-color: transparent;
+}
+
+.rdw-editor-wrapper {
+  border: 2px solid !important;
+  border-image: linear-gradient(180deg, #f467ec 0%, #38b6ff 100%) 1 !important;
+}
+.jodit-container {
+  border: 2px solid !important;
+  border-image: linear-gradient(180deg, #f467ec 0%, #38b6ff 100%) 1 !important;
+}
+.jodit-status-bar-link {
+  display: none;
+}
+.first_block .facilitator_content1{
+  padding: 12px 24px;
+}
+.first_block .facilitator_content1 h1{
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: 0em;
+  text-align: left;
+  background: linear-gradient(180deg, #F467EC 0%, #38B6FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.first_block .facilitator_content1 p{
+font-weight: 500;
+font-size: 32px;
+line-height: 30px;
+background: linear-gradient(180deg, #F467EC 0%, #38B6FF 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+}.first_block .facilitator_content1 .amt_num{
+  background: #FFFFFF;
+  width: 400px;
+  height: 46px;
+  font-size: 36px;
+  
+}.facilitator_checkboxes{
+  margin-top: 20px !important;
+}.facilitator_checkboxes span{
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 26px;
+  background: linear-gradient(180deg, #F467EC 0%, #38B6FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}.first_block .facilitator_content1 .frequencies{
+  background: #FFFFFF;
+  width: 44px;
+  height: 44px;
+  vertical-align: bottom;
+  margin-right: 10px;
+  font-size: 32px;
+}.facilitator_checkboxes div{
+  margin-bottom: 20px;
+}.terms{
+  font-size:26px !important;
+}.frequencies_last_checkbox{
+  background: #FFFFFF !important;
+  width: 80px !important;
+  height: 40px !important;
+  vertical-align: bottom;
+  margin-left: 12px;
+  font-size: 26px !important;
+}
+.second_block{
+  margin-top: 32px;
+}
+.second_block .facilitator_content2{
+  padding: 12px 24px;
+}
+.second_block .facilitator_content2 h1{
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: 0em;
+  text-align: left;
+  background: linear-gradient(180deg, #F467EC 0%, #38B6FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.second_block .facilitator_content2 p{
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 30px;
+  background: linear-gradient(180deg, #F467EC 0%, #38B6FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}.second_block .facilitator_content2 .frequencies {
+  background: #FFFFFF;
+  width: 44px;
+  height: 44px;
+  vertical-align: bottom;
+  margin-right: 10px;
+  font-size: 32px;
+}
+.profile_image img{
+  width: 100%;
+}.profile_data input{
+  background-color: white !important;
+}.profile_data select{
+  background-color: white !important;
+  margin-bottom: 10px;
+}
+.profile_data textarea{
+  background-color: white !important;
+  margin-top: 10px;
+  height: 307px !important;
+}.add_ques{
+  background: #FFFFFF !important;
+  width: 100%;
+  height: 46px;
+  font-size: 28px;
+  margin-bottom: 16px;
+}.questions h3{
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: 0em;
+  text-align: left;
+  background: linear-gradient(180deg, #F467EC 0%, #38B6FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}.questions a{
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+  background: linear-gradient(180deg, #F467EC 0%, #38B6FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  border-bottom: 2px solid #38B6FF;
+}.step3_second_div img{
+  height: 50px !important;
+  width: 50px !important;
+  border-radius: 100% !important;
+  margin-right: 20px;
+}.step3_second_div button{
+  background: linear-gradient(0deg, rgb(56, 182, 255) 6%, rgb(133, 1, 168) 79%);
+  color: white;
+  font-size: 24px;
+  border-radius: 8px;
+  border: none;
+  height: 44px;
+  padding: 0px 30px;
+  margin-right: 20px;
+}.step3_second_div{
+  margin-top: 20px;
+  display: inline-flex;
+}.step3_second_div p{
+  background: linear-gradient(180deg, #F467EC 0%, #38B6FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}.step3_second_div p{
+  font-size: 22px !important;
+}.step3_p{
+  margin-top: 15px;
+  margin-bottom: 24px;
+}.step3_third_div{
+  display: inline-flex;
+  width: 100%;
+}.step3_third_div img{
+  height: 40px !important;
+  width: 40px !important;
+  border-radius: 100% !important;
+  margin-right: 20px;
+}.step3_third_div input{
+  background: #FFFFFF !important;
+  width: 400px;
+  height: 40px !important;
+  font-size: 28px;
+  margin-bottom: 16px;
+  margin-right: 20px;
+}.facilitator_table_div table tbody td button{
+  background: linear-gradient(0deg, rgb(56, 182, 255) 6%, rgb(133, 1, 168) 79%);
+  color: white !important;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  height: 44px;
+  padding: 0px 30px;
+  margin-right: 20px;
+  float: right;
+}
+.facilitator_table_div{
+  width: 100%;
+  padding: 40px 20px 20px 20px;
+}
+.facilitator_table_div table{
+  width: 100%;
+}
+.facilitator_table_div table thead tr th{
+  font-size: 20px;
+  background: linear-gradient(180deg, #F467EC 0%, #38B6FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  padding: 12px 20px;
+}
+.facilitator_table_div table tbody tr .faci-td{
+  background: linear-gradient(180deg, #F467EC 0%, #38B6FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-size: 28px;
+  padding: 12px 20px;
+}.facilitator_table_div table tbody tr{
+  border-bottom: 1px solid #F467EC;
+}.facilitator_table_div table thead tr{
+  border-bottom: 1px solid #F467EC;
+}.how_it_works h1{
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 49px;
+  letter-spacing: 0em;
+  text-align: left;
+  background: linear-gradient(180deg, #F467EC 0%, #38B6FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}.how_it_works{
+  margin-top: 40px;
+}.how_it_works p div{
+  margin-bottom: 20px;
+}.how_it_works p{
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 49px;
+  letter-spacing: 0em;
+  text-align: left;
+  background: linear-gradient(180deg, #F467EC 0%, #38B6FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}.next_btn{
+  background: linear-gradient(0deg, rgb(56, 182, 255) 6%, rgb(133, 1, 168) 79%);
+  color: white !important;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  height: 44px;
+  padding: 0px 30px;
+  margin-right: 20px;
+  width: 200px;
+  float: right;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,177 @@
+/* *{
+  overflow-x:hidden;
+} */
+
+.input {
+  width: 100%;
+}
+
+@media only screen and (max-width: 767px){
+  main.MuiBox-root.css-zxdg2z{
+    padding: 15px 12px 15px 11px;
+    width: 82%;
+  }
+
+  .MuiButtonBase-root.MuiListItemButton-root.MuiListItemButton-gutters.MuiListItemButton-root.MuiListItemButton-gutters.css-1fqi8hc-MuiButtonBase-root-MuiListItemButton-root {
+    overflow-x: hidden !important;
+}
+
+.preview-box{
+  padding: 0px !important;
+}
+
+.preview-box .gradient-border{
+  display: flex;
+  flex-wrap: wrap !important;
+}
+
+.preview-box .preview-img{
+  width: 100% !important;
+}
+
+.preview-box .preview-txt{
+  width: 100% !important;
+}
+
+.css-1ygcj2i-MuiTableCell-root{
+  padding: 13px !important;
+}
+}
+
+.form-head{
+  background: linear-gradient(94.32deg, #f467ec 29.57%, #38b6ff 53.51%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 20px !important;
+}
+
+label{
+  background: linear-gradient(94.32deg, #f467ec 29.57%, #38b6ff 53.51%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 18px;
+}
+
+::placeholder{
+  background: linear-gradient(94.32deg, #f467ec 29.57%, #38b6ff 53.51%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+select::placeholder{
+  background: linear-gradient(94.32deg, #f467ec 29.57%, #38b6ff 53.51%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+@media only screen and (max-width: 767px){
+  /* .form-container{
+    width: 100% !important;
+  } */
+
+  input#title{
+    width: 100% !important;
+  }
+
+  input#price{
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  select#frequency{
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  select#monthly{
+    width: 100% !important;
+    margin-left: 0px !important;
+  }
+
+  select#category{
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  input#data{
+    width: 100% !important;
+    margin-left: 0px !important;
+    margin-top: 10px;
+  }
+
+  select#days{
+    width: 100% !important;
+    margin-left: 0px !important;
+    margin-top: 10px;
+  }
+
+  input#price2{
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  select#annually{
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-top: 10px;
+  }
+
+  .amt-cont{
+    width: 100% !important;
+  }
+
+  input#Amount{
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  input#amt-check{
+    width: 10% !important;
+  }
+
+  input#Title{
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-top: 10px;
+  }
+
+  select#day{
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-top: 10px;
+  }
+
+  input#text{
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  input#link{
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  /* button#upload-btn{
+    width: 100%;
+  }
+
+  button#save-btn{
+    width: 100% !important;
+    margin-left: 0 !important;
+  } */
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+  .form-container{
+    width: 100% !important;
+  }
+
+  select#days{
+    width: 34% !important;
+  }
+}

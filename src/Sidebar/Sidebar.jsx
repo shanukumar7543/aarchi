@@ -1,0 +1,592 @@
+import React, { useEffect, useState } from "react";
+import { LeftOutlined, RightOutlined } from "@ant-design/icons";
+import "./style.scss";
+import GradientLogo from "../assets/images/logo-gradient.png";
+import Logo from "../assets/images/logo.png";
+import HOME from "../assets/images/home.svg";
+import USERWHITE from "../assets/images/user-white.svg";
+import EYE from "../assets/images/eye.svg";
+import STAR from "../assets/images/star.svg";
+import GIFT from "../assets/images/gift.svg";
+import { isMobile } from "react-device-detect";
+import WestIcon from "@mui/icons-material/West";
+import { toggleSidebar } from "../app/utils";
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+
+const Sidebar = ({
+  isSidebarCollapsed,
+  setSidebarCollapsed,
+  setSidebarCollapsedActAcoount,
+  isSidebarCollapsedActAcoount,
+  IsActiveAccount,
+}) => {
+  // const [isCollapsed, setCollapsed] = useState(false);
+  const [logoPath, setLogo] = useState("");
+  const theme = localStorage.getItem("THEME");
+  useEffect(() => {
+    const setLogos = theme === "dark-theme" ? Logo : GradientLogo;
+    setLogo(setLogos);
+  }, [theme]);
+
+  const notShow = () => {
+    document.getElementById("myH1").style.display = "none";
+  };
+
+  return (
+    <>
+      <div
+        className={`tab-container  ${
+          !isSidebarCollapsedActAcoount && "collapsed"
+        }`}
+        id="sidebarWrapper"
+      >
+        <div className="logo">
+          <img src={logoPath} alt="logo" />
+        </div>
+
+        <div className="menus">
+          <div className="bar-icon">
+            <span className="hidden-in-mobile">
+              <span
+                className="toggle-icon"
+                onClick={() => {
+                  // setSidebarCollapsed(!isSidebarCollapsed);
+                  setSidebarCollapsedActAcoount(!isSidebarCollapsedActAcoount);
+                }}
+              >
+                {isSidebarCollapsedActAcoount ? (
+                  <LeftOutlined />
+                ) : (
+                  <RightOutlined />
+                )}
+              </span>
+            </span>
+            <div
+              style={{ textAlign: "right", paddingRight: "5px" }}
+              className="show-in-mobile"
+            >
+              <ArrowBackIosNewIcon
+                fontSize="large"
+                onClick={() => {
+                  toggleSidebar();
+                }}
+              />
+            </div>
+          </div>
+          <div>
+            <a href="http://power.org/" target="_blank">
+              <figure className="icon darkpink">
+                <img src={HOME} alt="home" />
+              </figure>
+              <p>
+                <span>HOME</span>
+              </p>
+            </a>
+          </div>
+          {IsActiveAccount ? (
+            ""
+          ) : (
+            <div>
+              {" "}
+              <a href="#" target="_blank">
+                <figure className="icon skyblue">
+                  <img src={USERWHITE} alt="profile" />
+                </figure>
+                <p>
+                  <span>PROFILE</span>
+                </p>
+              </a>
+              <a href="#" target="_blank">
+                <figure className="icon pink">
+                  <img src={EYE} alt="profile" />
+                </figure>
+                <p>
+                  <span>PROPERTY SHARES</span>
+                </p>
+              </a>
+              <a href="#" target="_blank">
+                <figure className="icon purple">
+                  <img src={STAR} alt="profile" />
+                </figure>
+                <p>
+                  <span>STAKING REWARDS</span>
+                </p>
+              </a>
+              <a href="#" target="_blank">
+                <figure className="icon darkpurple">
+                  <img src={GIFT} alt="profile" />
+                </figure>
+                <p>
+                  <span>EMPOWERMENT BOOSTER</span>
+                </p>
+              </a>
+            </div>
+          )}
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Sidebar;
+
+// import React from 'react'
+// import { Button } from 'react-bootstrap'
+// import Navbar from '../Navbar'
+// import Sidebar from '../Sidebar'
+// import './style.scss'
+
+// export default function Index() {
+//   return (
+//     <>
+//       {/* <Navbar /> */}
+//       <div style={{ display: 'flex', flexDirection: 'row' }}>
+//         <div>
+//           <Sidebar />
+//         </div>
+//         {/* <div
+//           className="content"
+//           style={{ display: 'flex', flexDirection: 'row' }}
+//         >
+//           <div style={{ display: 'flex', height: '160px' }}>
+//             <div className="back">
+//               <p className="text">Logo</p>
+//               <img
+//                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiJUaUKPQ0Vgmohj_GdSPKfriUx2i_a2cKVg&usqp=CAU"
+//                 class="img-fluid rounded-top"
+//                 height="70"
+//                 width="70"
+//                 alt=""
+//               />
+//               <br />
+//               <Button>Upload</Button>
+//             </div>
+//             <div className="back">
+//               <p className="text">Logo</p>
+//               <img
+//                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdP1eszT3UodJ2wjXO2gwPJz8suR5-esmJWg&usqp=CAU"
+//                 class="img-fluid rounded-top"
+//                 height="100"
+//                 width="70"
+//                 alt=""
+//               />
+//               <br />
+//               <Button>Upload</Button>
+//             </div>
+//             <div className="back">
+//               <p className="text">Logo</p>
+//               <img
+//                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-dlbDAcxTH4B-o7gzPq6X_tl4n9Zknq3WqA&usqp=CAU"
+//                 class="img-fluid rounded-top"
+//                 height="70"
+//                 width="70"
+//                 alt=""
+//               />
+//               <br />
+//               <Button>Upload</Button>
+//             </div>
+//             <div className="back">
+//               <p className="text">Logo</p>
+//               <img
+//                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVq3vo1Myh1Y5c6xDPWhaQ5n0f16-1-um-9g&usqp=CAU"
+//                 height="70"
+//                 width="70"
+//                 class="img-fluid rounded-top"
+//                 alt=""
+//               />
+//               <br />
+//               <Button>Upload</Button>
+//             </div>
+//           </div>
+
+//           <div className="back" style={{ flexDirection: 'row' }}>
+//             <label>Update Titel</label>
+//             <input type="text" placeholder="" />
+
+//             <label>Update SubTitel</label>
+//             <input type="text" placeholder="" />
+//           </div>
+//         </div> */}
+//       </div>
+//     </>
+//   )
+// }
+
+// 222
+// import * as React from "react";
+// import { styled, useTheme } from "@mui/material/styles";
+// import Box from "@mui/material/Box";
+
+// import MuiDrawer from "@mui/material/Drawer";
+// import MuiAppBar from "@mui/material/AppBar";
+// import Toolbar from "@mui/material/Toolbar";
+// import List from "@mui/material/List";
+// import CssBaseline from "@mui/material/CssBaseline";
+// import Typography from "@mui/material/Typography";
+// import Divider from "@mui/material/Divider";
+// import IconButton from "@mui/material/IconButton";
+// import MenuIcon from "@mui/icons-material/Menu";
+// import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+// import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+// import ListItem from "@mui/material/ListItem";
+// import ListItemButton from "@mui/material/ListItemButton";
+// import ListItemIcon from "@mui/material/ListItemIcon";
+// import ListItemText from "@mui/material/ListItemText";
+// import InboxIcon from "@mui/icons-material/MoveToInbox";
+// import MailIcon from "@mui/icons-material/Mail";
+// import VerifiedUserIcon from "@mui/icons-material/VerifiedUser";
+// // import UploadImage from "../UploadImage";
+// import DriveFolderUploadIcon from "@mui/icons-material/DriveFolderUpload";
+// import DashboardIcon from "@mui/icons-material/Dashboard";
+// import PersonIcon from "@mui/icons-material/Person";
+// // import AddFrontpage from "../AddFrontpage";
+// import DragHandleIcon from "@mui/icons-material/DragHandle";
+// // import Category from "../Category";
+// // import Slider from "../../component/Slider";
+// import { Collapse } from "@mui/material";
+// import "./style.scss";
+
+// const drawerWidth = 260;
+
+// const openedMixin = (theme) => ({
+//   width: drawerWidth,
+//   transition: theme.transitions.create("width", {
+//     easing: theme.transitions.easing.sharp,
+//     duration: theme.transitions.duration.enteringScreen,
+//   }),
+//   overflowX: "hidden",
+// });
+
+// const closedMixin = (theme) => ({
+//   transition: theme.transitions.create("width", {
+//     easing: theme.transitions.easing.sharp,
+//     duration: theme.transitions.duration.leavingScreen,
+//   }),
+//   overflowX: "hidden",
+//   width: `calc(${theme.spacing(9)} + 1px)`,
+//   [theme.breakpoints.up("sm")]: {
+//     width: `calc(${theme.spacing(7)} + 1px)`,
+//   },
+// });
+
+// const DrawerHeader = styled("div")(({ theme }) => ({
+//   display: "flex",
+//   alignItems: "center",
+//   justifyContent: "flex-end",
+//   padding: theme.spacing(0, 1),
+//   // necessary for content to be below app bar
+//   ...theme.mixins.toolbar,
+// }));
+
+// const AppBar = styled(MuiAppBar, {
+//   shouldForwardProp: (prop) => prop !== "open",
+// })(({ theme, open }) => ({
+//   zIndex: theme.zIndex.drawer + 1,
+//   transition: theme.transitions.create(["width", "margin"], {
+//     easing: theme.transitions.easing.sharp,
+//     duration: theme.transitions.duration.leavingScreen,
+//   }),
+//   ...(open && {
+//     marginLeft: drawerWidth,
+//     width: `calc(100% - ${drawerWidth}px)`,
+//     transition: theme.transitions.create(["width", "margin"], {
+//       easing: theme.transitions.easing.sharp,
+//       duration: theme.transitions.duration.enteringScreen,
+//     }),
+//   }),
+// }));
+
+// const Drawer = styled(MuiDrawer, {
+//   shouldForwardProp: (prop) => prop !== "open",
+// })(({ theme, open }) => ({
+//   width: drawerWidth,
+//   flexShrink: 0,
+//   whiteSpace: "nowrap",
+//   boxSizing: "border-box",
+//   ...(open && {
+//     ...openedMixin(theme),
+//     "& .MuiDrawer-paper": openedMixin(theme),
+//   }),
+//   ...(!open && {
+//     ...closedMixin(theme),
+//     "& .MuiDrawer-paper": closedMixin(theme),
+//   }),
+// }));
+
+// export default function MiniDrawer() {
+//   const theme = useTheme();
+//   const [open, setOpen] = React.useState(false);
+//   const [tabopen, setTabOpen] = React.useState(true);
+//   const [activeTab, setActiveTab] = React.useState(0);
+//   const [category, setCategory] = React.useState("");
+
+//   const handleDrawerOpen = () => {
+//     setOpen(true);
+//   };
+//   const handleClick = () => {
+//     setTabOpen(!tabopen);
+//   };
+
+//   const handleDrawerClose = () => {
+//     setOpen(false);
+//   };
+
+//   return (
+//     <>
+//       <div>
+//         <Box sx={{ display: "flex" }}>
+//           {/* <CssBaseline /> */}
+
+//           <Drawer variant="permanent" open={open}>
+//             <Box
+//               style={{
+//                 background: "linear-gradient(180deg, #f467ec 0%, #38b6ff 100%)",
+//                 minHeight: "100vh",
+//               }}
+//             >
+//               <Divider />
+//               <List style={{ paddingRight: "6px" }}>
+//                 <IconButton
+//                   color="inherit"
+//                   aria-label="open drawer"
+//                   onClick={handleDrawerOpen}
+//                   edge="start"
+//                   sx={{
+//                     marginRight: 5,
+//                     ...(open && { display: "none" }),
+//                   }}
+//                 >
+//                   <MenuIcon />
+//                 </IconButton>
+//                 <DrawerHeader>
+//                   <IconButton onClick={handleDrawerClose}>
+//                     {theme.direction === "rtl" ? (
+//                       <ChevronRightIcon />
+//                     ) : (
+//                       <ChevronLeftIcon />
+//                     )}
+//                   </IconButton>
+//                 </DrawerHeader>
+//                 {["Home"].map((text, index) => (
+//                   <ListItem
+//                     key={text}
+//                     disablePadding
+//                     sx={{
+//                       display: "block",
+//                       background:
+//                         "linear-gradient(180deg, #f467ec 0%, #38b6ff 100%)",
+//                     }}
+//                     onClick={() => {
+//                       setActiveTab(index);
+//                     }}
+//                   >
+//                     <ListItemButton
+//                       onClick={handleClick}
+//                       sx={{
+//                         minHeight: 48,
+//                         justifyContent: open ? "initial" : "center",
+//                         px: 2.5,
+//                       }}
+//                     >
+//                       <ListItemIcon
+//                         sx={{
+//                           minWidth: 0,
+//                           mr: open ? 3 : "auto",
+//                           justifyContent: "center",
+//                         }}
+//                       >
+//                         {index === 0 && <DashboardIcon />}
+//                         {/* {index === 1 && <DriveFolderUploadIcon />}
+//                         {index === 2 && <DriveFolderUploadIcon />}
+//                         {index === 3 && <DriveFolderUploadIcon />} */}
+//                       </ListItemIcon>
+//                       <ListItemText
+//                         primary={text}
+//                         sx={{ opacity: open ? 1 : 0 }}
+//                       />
+//                     </ListItemButton>
+//                   </ListItem>
+//                 ))}
+//                 {[3, 4, 5].includes(activeTab) && (
+//                   <Collapse
+//                     in={[3, 4, 5].includes(activeTab)}
+//                     timeout="auto"
+//                     unmountOnExit
+//                   >
+//                     <List
+//                       sx={{
+//                         paddingTop: "0px",
+//                       }}
+//                     >
+//                       <ListItemButton
+//                         onClick={() => {
+//                           setActiveTab(4);
+//                         }}
+//                         sx={{
+//                           paddingLeft: "45px",
+//                         }}
+//                         className="text-white"
+//                       >
+//                         <ListItemIcon
+//                           sx={{
+//                             minWidth: 0,
+//                             display: "flex",
+//                             mr: open ? 3 : "auto",
+//                             justifyContent: "center",
+//                           }}
+//                         >
+//                           <DriveFolderUploadIcon />
+//                         </ListItemIcon>
+//                         <ListItemText
+//                           primary={"Category"}
+//                           sx={{ opacity: open ? 1 : 0 }}
+//                         />
+//                       </ListItemButton>
+//                       <ListItemButton
+//                         onClick={() => {
+//                           setActiveTab(5);
+//                         }}
+//                         sx={{
+//                           paddingLeft: "45px",
+//                         }}
+//                         className="text-white"
+//                       >
+//                         <ListItemIcon
+//                           sx={{
+//                             minWidth: 0,
+//                             display: "flex",
+//                             mr: open ? 3 : "auto",
+//                             justifyContent: "center",
+//                           }}
+//                         >
+//                           <DriveFolderUploadIcon />
+//                         </ListItemIcon>
+//                         <ListItemText
+//                           primary={"Create Slider"}
+//                           sx={{ opacity: open ? 1 : 0 }}
+//                         />
+//                       </ListItemButton>
+//                     </List>
+//                   </Collapse>
+//                 )}
+//               </List>
+//               <Divider />
+//             </Box>
+//           </Drawer>
+//           <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+//             <DrawerHeader />
+//             {/* {activeTab === 0 && <>WELCOME !!</>} */}
+//             {/* {activeTab === 1 && <AddFrontpage />}
+//             {activeTab === 2 && <UploadImage />}
+//             {/* {activeTab === 3 && <Category />} */}
+//             {/* {activeTab === 4 && <Category />}
+//             {activeTab === 5 && <Slider />} */}
+//           </Box>
+//         </Box>
+//       </div>
+//     </>
+//   );
+// }
+
+// import React, { useEffect, useState } from "react";
+// import { LeftOutlined, RightOutlined } from "@ant-design/icons";
+// import "./style.scss";
+// import GradientLogo from "../assets/images/logo-gradient.png";
+// import Logo from "../assets/images/logo.png";
+// import HOME from "../assets/images/home.svg";
+// import USERWHITE from "../assets/images/user-white.svg";
+// import EYE from "../assets/images/eye.svg";
+// import STAR from "../assets/images/star.svg";
+// import GIFT from "../assets/images/gift.svg";
+
+// const Sidebar = ({
+//   isSidebarCollapsed,
+//   setSidebarCollapsed,
+//   setSidebarCollapsedActAcoount,
+//   isSidebarCollapsedActAcoount,
+// }) => {
+//   // const [isCollapsed, setCollapsed] = useState(false);
+//   const [logoPath, setLogo] = useState("");
+//   const theme = localStorage.getItem("THEME");
+//   useEffect(() => {
+//     const setLogos = theme === "dark-theme" ? Logo : GradientLogo;
+//     setLogo(setLogos);
+//   }, [theme]);
+
+//   return (
+//     <div
+//       className={`tab-container  ${
+//         isSidebarCollapsedActAcoount ? "collapsed" : ""
+//       }`}
+//     >
+//       <div className="logo">
+//         <img src={logoPath} alt="logo" />
+//       </div>
+
+//       <div className="menus">
+//         <div className="bar-icon">
+//           <span
+//             className="toggle-icon"
+//             onClick={() => {
+//               // setSidebarCollapsed(!isSidebarCollapsed);
+//               setSidebarCollapsedActAcoount(!isSidebarCollapsedActAcoount);
+//             }}
+//           >
+//             {isSidebarCollapsedActAcoount ? (
+//               <RightOutlined />
+//             ) : (
+//               <LeftOutlined />
+//             )}
+//           </span>
+//         </div>
+
+//         <a href="http://power.org/" target="_blank">
+//           <figure className="icon darkpink">
+//             <img src={HOME} alt="home" />
+//           </figure>
+//           <p>
+//             <span>HOME</span>
+//           </p>
+//         </a>
+
+//         {/* <a href="#" target="_blank">
+//           <figure className="icon skyblue">
+//             <img src={USERWHITE} alt="profile" />
+//           </figure>
+//           <p>
+//             <span>PROFILE</span>
+//           </p>
+//         </a>
+
+//         <a href="#" target="_blank">
+//           <figure className="icon pink">
+//             <img src={EYE} alt="profile" />
+//           </figure>
+//           <p>
+//             <span>PROPERTY SHARES</span>
+//           </p>
+//         </a>
+
+//         <a href="#" target="_blank">
+//           <figure className="icon purple">
+//             <img src={STAR} alt="profile" />
+//           </figure>
+//           <p>
+//             <span>STAKING REWARDS</span>
+//           </p>
+//         </a>
+
+//         <a href="#" target="_blank">
+//           <figure className="icon darkpurple">
+//             <img src={GIFT} alt="profile" />
+//           </figure>
+//           <p>
+//             <span>EMPOWERMENT BOOSTER</span>
+//           </p>
+//         </a> */}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Sidebar;

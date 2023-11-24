@@ -1,0 +1,795 @@
+@import "../../../style/variables.scss";
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: end;
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    justify-content: center !important;
+  }
+}
+
+.top-icons {
+  display: flex;
+  padding-top: 18px;
+  justify-content: flex-end;
+
+  @media only screen and (max-width: 767px) {
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 18px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    justify-content: center !important;
+    padding-top: 10px;
+    padding-bottom: 18px;
+  }
+
+  img {
+    width: 11% !important;
+    padding: 0 7px;
+
+    @media only screen and (max-width: 767px) {
+      width: 14% !important;
+    }
+  }
+}
+
+.wallet-container {
+  background-image: url("/assets/images/phoenix on fire 1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  @media only screen and (max-width: 767px) {
+    background-image: none;
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    background-image: none;
+  }
+}
+
+.wallet {
+  &-container {
+    width: 100%;
+    padding: 40px 80px 40px 100px;
+
+    @media screen and (max-width: 767px) {
+      padding: 30px 15px;
+    }
+
+    .theme-icon {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      cursor: pointer;
+
+      .eye-img {
+        margin-left: 25px !important;
+      }
+    }
+
+    .buy-container {
+      margin: 20px 0;
+
+      .form-control:focus {
+        box-shadow: none;
+      }
+
+      .amount-input {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .input-group {
+          background: $white;
+          border-radius: 8px;
+        }
+
+        .form-control.amount {
+          background: $white;
+          border-color: $lightpurple_1;
+          font-weight: 700;
+          height: 60px;
+          color: $lineargradient;
+          border-width: 4px;
+          border-style: solid;
+          border-image: linear-gradient(
+              178.34deg,
+              #8501a8 -27.26%,
+              #38b6ff 98.59%
+            )
+            1;
+          border-right: none;
+          border-left: none;
+          background: linear-gradient(180deg, #8501a8 0%, #38b6ff 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          -text-fill-color: transparent;
+          animation-name: blink;
+          animation-duration: 800ms;
+          animation-iteration-count: infinite;
+
+          @media screen and (max-width: 767px) {
+            width: 100px;
+          }
+        }
+
+        .form-control::placeholder {
+          font-weight: 700;
+          background: linear-gradient(180deg, #8501a8 0%, #38b6ff 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          -text-fill-color: transparent;
+          color: none !important;
+        }
+
+        .input-group-prepend {
+          .input-group-text {
+            background-color: $white;
+            border-width: 4px;
+            border-style: solid;
+            border-image: linear-gradient(
+                178.34deg,
+                #8501a8 -27.26%,
+                #38b6ff 98.59%
+              )
+              1;
+            border-radius: 8px 0 0 8px;
+            font-weight: 700;
+            height: 60px;
+            background: linear-gradient(180deg, #8501a8 0%, #38b6ff 100%);
+            --webkit-background-clip: text;
+            --webkit-text-fill-color: transparent;
+            background-clip: text;
+            -text-fill-color: transparent;
+          }
+        }
+
+        .input-group-prepend.prev {
+          background: $white;
+          border-top-left-radius: 8px;
+          border-bottom-left-radius: 8px;
+          -webkit-border-top-left-radius: 8px;
+          -webkit-border-bottom-left-radius: 8px;
+
+          .input-group-text {
+            border-right: none;
+            background: linear-gradient(180deg, #8501a8 0%, #38b6ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            -text-fill-color: transparent;
+          }
+        }
+
+        .input-group-prepend.next {
+          background: $white;
+          border-top-right-radius: 8px;
+          border-bottom-right-radius: 8px;
+
+          .input-group-text {
+            border-left: none;
+            border-radius: 0 8px 8px 0;
+            background: linear-gradient(180deg, #8501a8 0%, #38b6ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            -text-fill-color: transparent;
+          }
+        }
+      }
+    }
+
+    .buy_button {
+      height: 60px;
+      border-radius: 8px;
+      background: $lineargradient;
+      text-align: center;
+      padding: 8px 25px;
+      font-size: 25px;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      min-width: 100%;
+      color: $white !important;
+
+      @media screen and (max-width: 991px) {
+        font-size: 22px;
+      }
+
+      @media screen and (max-width: 767px) {
+        font-size: 20px;
+        margin: 10px 0 0 0;
+      }
+    }
+
+    .disconnect_button {
+      height: 50px;
+      border-radius: 8px;
+      background: $danger !important;
+      text-align: center;
+      padding: 11px 25px;
+      font-size: 18px;
+      font-weight: 400;
+      text-decoration: none;
+      color: $white !important;
+      cursor: pointer;
+      margin-right: 10px;
+
+      @media screen and (max-width: 767px) {
+        font-size: 16px;
+        padding: 10px 15px;
+      }
+    }
+
+    .card_button {
+      height: 50px;
+      border-radius: 8px;
+      background: $success;
+      text-align: center;
+      padding: 7px 25px;
+      font-size: 18px;
+      font-weight: 400;
+      text-decoration: none;
+      margin-right: 10px;
+
+      @media screen and (max-width: 767px) {
+        display: block;
+        margin: 20px 0;
+      }
+
+      img {
+        margin-right: 8px;
+      }
+    }
+
+    .connect_button {
+      min-height: 60px;
+      border-radius: 8px;
+      background: $lineargradient;
+      border: 4px solid $lineargradient;
+      text-align: center;
+      padding: 11px 25px;
+      font-size: 25px;
+      font-weight: 500;
+      text-decoration: none;
+      color: $white !important;
+      cursor: pointer;
+      min-width: 100%;
+
+      @media screen and (max-width: 991px) {
+        font-size: 22px;
+      }
+
+      @media screen and (max-width: 767px) {
+        font-size: 20px;
+        margin: 5px 0;
+      }
+    }
+
+    .membership {
+      background: $lineargradient;
+      border: 4px solid $lineargradient;
+    }
+
+    .personal_balance {
+      margin-top: 20px;
+      margin-bottom: 24px;
+      font-size: 25px;
+      font-weight: 700;
+    }
+
+    .label_title {
+      margin: 0 auto;
+      display: block !important;
+
+      .market_block {
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        background: rgba(133, 1, 168, 0.4);
+        padding: 15px 20px;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        margin: 10px 0;
+        width: 100%;
+        border-width: 4px;
+        border-style: solid;
+        border-image: linear-gradient(
+            178.34deg,
+            #8501a8 -27.26%,
+            #38b6ff 98.59%
+          )
+          1;
+        border-radius: 8px;
+        background: linear-gradient(180deg, #f467ec 0%, #38b6ff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        -text-fill-color: transparent;
+      }
+
+      h3 {
+        margin-bottom: 5px;
+        font-size: 25px;
+        font-weight: 700;
+        display: block;
+
+        @media screen and (max-width: 991px) {
+          font-size: 17px;
+        }
+
+        @media screen and (max-width: 767px) {
+          font-size: 18px;
+        }
+      }
+
+      span {
+        font-size: 40px;
+        font-weight: 700;
+        display: block;
+
+        @media screen and (max-width: 991px) {
+          font-size: 35px;
+        }
+
+        @media screen and (max-width: 767px) {
+          font-size: 30px;
+        }
+      }
+
+      @media screen and (max-width: 991px) {
+        .label_title {
+          display: block !important;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        h3 {
+          font-size: 16px;
+          display: inline-block;
+        }
+      }
+    }
+
+    .logo {
+      display: block;
+      margin: auto;
+    }
+
+    .stake-people {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      font-size: 30px;
+      background: linear-gradient(94.32deg, #f467ec 29.57%, #38b6ff 53.51%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      -text-fill-color: transparent;
+
+      @media screen and (max-width: 991px) {
+        font-size: 26px;
+      }
+
+      @media screen and (max-width: 767px) {
+        font-size: 22px;
+      }
+    }
+
+    .global {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      font-size: 40px;
+      background: linear-gradient(94.32deg, #f467ec 29.57%, #38b6ff 53.51%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      -text-fill-color: transparent;
+
+      @media screen and (max-width: 991px) {
+        font-size: 26px;
+      }
+
+      @media screen and (max-width: 767px) {
+        font-size: 22px;
+      }
+    }
+
+    .star {
+      background: $bg2purple;
+      width: 40%;
+      height: 60px;
+      text-align: center;
+      display: flex;
+
+      img {
+        margin: auto;
+        min-height: 45px;
+      }
+    }
+
+    .eye {
+      background: $pink;
+      width: 40%;
+      height: 60px;
+      text-align: center;
+      display: flex;
+
+      img {
+        margin: auto;
+        min-height: 40px;
+      }
+    }
+
+    .btns-shape {
+      border: 1px solid;
+      padding: 10px 40px;
+      cursor: pointer;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      margin: 0 5px;
+
+      @media screen and (max-width: 767px) {
+        padding: 6px 15px;
+        margin: 0 5px;
+        font-size: 15px;
+      }
+
+      &:hover {
+        background: $lightpurple;
+        border-color: $lightpurple;
+      }
+    }
+
+    .active-btns {
+      background: $lightpurple;
+      border-color: $lightpurple;
+    }
+
+    .plan-one {
+      background-color: $white;
+      padding: 20px;
+      border-width: 4px;
+      border-style: solid;
+      border-image: linear-gradient(178.34deg, #8501a8 -27.26%, #38b6ff 98.59%)
+        1;
+      border-radius: 8px;
+
+      @media screen and (max-width: 1199px) {
+        margin-bottom: 20px;
+      }
+
+      h3 {
+        font-size: 30px;
+        font-weight: 700;
+        background: linear-gradient(107.39deg, #38b6ff 28.08%, #8501a8 61.92%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        -text-fill-color: transparent;
+
+        @media screen and (max-width: 1199px) {
+          font-size: 27px;
+        }
+
+        @media screen and (max-width: 991px) {
+          font-size: 25px;
+        }
+
+        @media screen and (max-width: 767px) {
+          font-size: 22px;
+        }
+      }
+
+      h6 {
+        margin: 25px auto;
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: 1.2px;
+        text-align: center;
+        background: linear-gradient(107.39deg, #38b6ff 28.08%, #8501a8 61.92%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        -text-fill-color: transparent;
+        max-width: 270px;
+
+        @media screen and (max-width: 1199px) {
+          font-size: 27px;
+        }
+
+        @media screen and (max-width: 991px) {
+          font-size: 25px;
+        }
+
+        @media screen and (max-width: 767px) {
+          font-size: 22px;
+        }
+      }
+
+      .plan-details {
+        font-size: 19px;
+        text-align: start;
+        list-style-type: none;
+
+        @media screen and (max-width: 1199px) {
+          font-size: 18px;
+        }
+
+        @media screen and (max-width: 991px) {
+          font-size: 17px;
+        }
+
+        @media screen and (max-width: 767px) {
+          font-size: 16px;
+        }
+      }
+
+      .plan-details li {
+        position: relative;
+        padding-left: 15px;
+        background: linear-gradient(180deg, #8501a8 0%, #38b6ff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        -text-fill-color: transparent;
+      }
+
+      .plan-details li:after {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: linear-gradient(180deg, #8501a8 0%, #38b6ff 100%);
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 11px;
+      }
+
+      .buy-membership {
+        height: 60px;
+        border-radius: 8px;
+        background: linear-gradient(180deg, #8501a8 0%, #38b6ff 100%);
+        color: $white !important;
+        text-align: center;
+        padding: 8px 10px;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        border-radius: 10px;
+        margin-top: 25px;
+        border: none;
+        width: 100%;
+
+        @media screen and (max-width: 1300px) {
+          font-size: 18px;
+        }
+
+        @media screen and (max-width: 991px) {
+          font-size: 17px;
+        }
+
+        @media screen and (max-width: 767px) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  &-content {
+    margin-top: 20px;
+    text-align: center;
+
+    .wallet-ls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+
+      .wallet-area {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #2e2e2e;
+        border-radius: 10px;
+        flex-wrap: wrap;
+        position: relative;
+        padding: 20px;
+        min-width: 100%;
+
+        .wallet_item {
+          position: relative;
+          width: 100%;
+        }
+
+        .wallet_item:after {
+          position: absolute;
+          top: -52px;
+          display: block;
+          content: "\f0de";
+          left: 20px;
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          font-size: 50px;
+        }
+
+        .wallet_item.item:after {
+          right: 20px;
+          left: auto;
+        }
+
+        .wallet-show {
+          display: inline-block;
+          flex-direction: column;
+          border: 1px solid $lightgray;
+          margin: 40px 10px 10px 10px;
+          padding: 20px;
+          border-radius: 6px;
+          cursor: pointer;
+          width: 210px;
+
+          a {
+            span {
+              font-weight: 600;
+              letter-spacing: 3px;
+            }
+          }
+        }
+
+        .fa-times {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          position: absolute;
+          top: 8px;
+          right: 8px;
+          font-size: 20px;
+          border-radius: 50%;
+          border: 1px solid;
+          width: 30px;
+          height: 30px;
+          padding: 5px;
+        }
+
+        .payment {
+          width: 600px;
+
+          @media screen and (max-width: 767px) {
+            width: 96%;
+            padding: 10px 0 0 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.payment-modal-wrapper {
+  .modal-content {
+    max-width: 500px !important;
+    margin: auto;
+  }
+}
+
+.wallet-container .theme-icon .eye-img {
+  margin-left: 12px !important;
+}
+
+.wallet-container .disconnect_button {
+  margin-right: 20px;
+}
+
+.wallet-container .connect_button {
+  width: 410px !important;
+}
+
+.col-12.col-sm-6.col-xl-4.m-2.plan-card {
+  width: 32.33%;
+}
+
+@media only screen and (max-width: 767px) {
+  .wallet-container .connect_button {
+    width: 330px !important;
+  }
+
+  .col-12.col-sm-6.col-xl-4.m-2.plan-card {
+    width: 100%;
+  }
+
+  button.btn.connect_button.membership {
+    margin: 0 !important;
+  }
+
+  button.btn.connect_button {
+    margin: 0.7rem 0 !important;
+  }
+
+  .col-12.col-sm-6.col-xl-4.m-2.plan-card {
+    margin: 0 !important;
+  }
+
+  .strip-payment-modal {
+    .modal-content {
+      width: 345px !important;
+      margin-left: 0% !important;
+    }
+  }
+}
+
+.strip-payment-modal {
+  .modal-body {
+    overflow-y: auto;
+  }
+}
+
+/* for iphone XR */
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+  .strip-payment-modal {
+    .modal-content {
+      width: 381px !important;
+      margin-left: 2% !important;
+    }
+  }
+}
+
+/* for iphone 12pro */
+@media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+  .strip-payment-modal {
+    .modal-content {
+      width: 375px !important;
+      margin-left: 0% !important;
+    }
+  }
+}
+
+/* for pixel 5 */
+@media only screen and (device-width: 393px) and (device-height: 851px) and (-webkit-device-pixel-ratio: 2.75) {
+  .strip-payment-modal {
+    .modal-content {
+      width: 375px !important;
+      margin-left: 0% !important;
+    }
+  }
+}
+
+/* for s20 ultra */
+@media only screen and (device-width: 412px) and (device-height: 915px) and (-webkit-device-pixel-ratio: 3.5) {
+  .strip-payment-modal {
+    .modal-content {
+      width: 393px !important;
+      margin-left: 0% !important;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .wallet-container {
+    padding: 40px 40px 40px 70px;
+  }
+
+  .wallet-container .connect_button {
+    width: 330px !important;
+  }
+
+  .col-12.col-sm-6.col-xl-4.m-2.plan-card {
+    width: 46%;
+  }
+
+  .strip-payment-modal {
+    .modal-content {
+      width: 360px !important;
+      margin-left: 20% !important;
+    }
+  }
+}

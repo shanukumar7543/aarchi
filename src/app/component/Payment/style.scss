@@ -1,0 +1,95 @@
+@import '../../../style/variables.scss';
+
+img{
+    max-width: 100%;
+}
+
+.StripeElement {
+     background-color: $white;
+     height: 50px;
+     padding: 15px 12px;
+     border-radius: 5px;
+     border: 1px solid #DEDEE2;     
+     -webkit-transition: box-shadow 150ms ease;
+     transition: box-shadow 150ms ease;
+     margin-bottom: 15px;
+}
+
+.card_detail{
+    font-size: 20px;
+    font-weight: 400;
+    color: #747474;
+    margin-bottom: 10px;
+
+    @media screen and (max-width:767px) {
+        font-size: 18px;                
+    }
+}
+
+.affiliate{
+    text-align: center;
+    color: #747474;
+    font-size: 15px;
+
+    @media screen and (max-width:767px) {        
+        font-size: 14px;              
+    }
+
+    a{
+        color: #747474;
+    }
+}
+
+.payment_detail{
+    font-size: 19px;
+    font-weight: 400;
+    color: #fff;
+    padding: 5px;
+    margin:5px 0;
+    background: $success;
+    width: 100%;
+    border-radius: 6px;
+    display: block;
+    line-height: 26px;
+
+    @media screen and (max-width:767px) {        
+        font-size: 16px;              
+    }
+}
+
+.payment_detail:hover{
+    color: #fff;
+}
+
+.payment_detail:active, .payment_detail.active{
+    background: $skyblue;
+}
+
+.submit_btn{
+    width: 100%;
+    padding: 7px 15px;
+    background: $success;
+    font-size: 22px;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 6px;
+    text-align: center;
+    border: none;
+    margin: 0 0 20px 0;
+
+    @media screen and (max-width:767px) {        
+        font-size: 20px;              
+    }
+}
+
+.StripeElement--focus {
+     box-shadow: 0 1px 3px 0 #6c737b;
+}
+
+.StripeElement--invalid {
+     border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+     background-color: #fefde5 !important;
+}

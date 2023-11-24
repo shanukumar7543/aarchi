@@ -1,0 +1,28 @@
+.sidebar {
+  height: 680px;
+  width: 370px;
+  //   background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, #f467ec 0%, #38b6ff 100%);
+  color: rgb(16, 16, 16);
+  // margin-top: 71px;
+  padding-right: 50px;
+  // border-radius: 10px;
+  text-decoration: none;
+  // position: fixed;
+  color: white;
+}
+.list {
+  padding-bottom: 20px;
+  margin-top: 5px;
+  width: 200px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.logout {
+  padding-top: 100px;
+}
+.list:hover {
+  background-color: rgb(113, 10, 39);
+}
+
+

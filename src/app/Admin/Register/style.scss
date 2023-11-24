@@ -1,0 +1,100 @@
+.Register {
+  background: linear-gradient(180deg, #f467ec 0%, #38b6ff 100%);
+}
+.input {
+  height: auto;
+  width: fit-content;
+  border-radius: 10px 55px 10px 55px;
+}
+
+
+@media only screen and (max-width: 767px){
+  .Register{
+    .imp{
+      margin-left: 0px !important;
+    }
+  } 
+
+  .Register{
+    .form-div{
+      width: 300px !important;
+      height: 520px !important;
+      margin-left: 0px !important;
+    }
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px){
+  .Register{
+    .imp{
+      margin-left: 0px !important;
+    }
+  } 
+
+  .Register{
+    .form-div{
+      width: 400px !important;
+      height: 520px !important;
+      margin-left: 170px !important;
+      margin-top: 100px;
+    }
+  }
+}
+
+/* for iphone XR */
+@media only screen 
+    and (device-width : 414px) 
+    and (device-height : 896px) 
+    and (-webkit-device-pixel-ratio : 2){
+      .Register{
+        .form-div{
+          width: 300px !important;
+          height: 520px !important;
+          margin-left: 22px !important;
+        }
+      }
+    }
+
+    /* for iphone 12pro */
+@media only screen 
+and (device-width : 390px) 
+and (device-height : 844px) 
+and (-webkit-device-pixel-ratio : 3){
+  .Register{
+    .form-div{
+      width: 300px !important;
+      height: 520px !important;
+      margin-left: 14px !important;
+    }
+  }
+}
+
+/* for pixel 5 */
+@media only screen 
+    and (device-width : 393px) 
+    and (device-height : 851px) 
+    and (-webkit-device-pixel-ratio : 2.75){
+      .Register{
+        .form-div{
+          width: 300px !important;
+          height: 520px !important;
+          margin-left: 14px !important;
+        }
+      }
+}
+
+
+/* for s20 ultra */
+@media only screen 
+and (device-width : 412px) 
+and (device-height : 915px) 
+and (-webkit-device-pixel-ratio : 3.5){
+  .Register{
+    .form-div{
+      width: 300px !important;
+      height: 520px !important;
+      margin-left: 22px !important;
+    }
+  }
+}

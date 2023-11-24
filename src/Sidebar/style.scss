@@ -1,0 +1,135 @@
+@import "../style/variables.scss";
+
+.tab-container {
+  border-right: 1px solid $darkpurple;
+  min-height: 100vh;
+  width: 270px !important;
+  overflow: hidden;
+  // position: fixed;
+  background: var(--bg-color);
+  z-index: 1;
+
+  &.collapsed {
+    width: 60px !important;
+  }
+
+  .logo {
+    padding: 15px 30px;
+    padding-left: 50px;
+  }
+
+  .menus {
+    margin-top: 30px;
+
+    .bar-icon {
+      position: relative;
+      cursor: pointer;
+
+      .toggle-icon {
+        position: absolute;
+        right: 0;
+        top: -52px;
+        font-size: 22px;
+      }
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      margin-top: 50px;
+
+      .icon {
+        border-radius: 0 20px 20px 0;
+        text-align: center;
+        display: flex;
+        margin: 0;
+        position: absolute;
+        left: -8px;
+        padding: 14px;
+
+        img {
+          width: 24px;
+        }
+      }
+
+      .darkpink {
+        background-color: $lightpurple_1;
+      }
+
+      .skyblue {
+        background-color: $skyblue;
+      }
+
+      .pink {
+        background-color: $pink;
+      }
+
+      .purple {
+        background-color: $bg2purple;
+      }
+
+      .darkpurple {
+        background-color: $darkpurple;
+      }
+
+      p {
+        margin-left: 75px;
+        font-weight: 700;
+        display: flex;
+        background: linear-gradient(95.21deg, #38b6ff 3.74%, #f467ec 54.18%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-decoration: none;
+        align-items: center;
+        margin-bottom: 0;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.toggle-icon-mobile {
+  display: none;
+}
+
+.tab-container.collapsed .logo {
+  display: block;
+}
+
+.aaa {
+  display: block;
+}
+
+.bbb {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .bar-icon-mobile {
+    width: 0;
+  }
+
+  .tab-container.collapsed {
+    width: 400px !important;
+    border-right: 0px !important;
+  }
+
+  .toggle-icon-mobile {
+    display: block;
+    width: 400px !important;
+    // position: absolute;
+    left: 3px;
+    z-index: 1;
+    top: 120px;
+    font-size: 22px;
+  }
+
+  .aaa {
+    display: none;
+  }
+
+  .bbb {
+    display: block;
+  }
+}

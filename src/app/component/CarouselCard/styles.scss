@@ -1,0 +1,49 @@
+// .slider-border{
+//     @media only screen and (max-width: 767px){
+//         flex-wrap: wrap !important;
+//         overflow-y: auto;
+//     }
+// }
+
+// .slider-border{
+//     padding: 4px !important;
+//     border: double 1px transparent;
+//     border-radius: 25px;
+//     -webkit-border-radius: 25px;
+//     -moz-border-radius: 25px;
+//     -ms-border-radius: 25px;
+//     -o-border-radius: 25px;
+//     background-image: linear-gradient(white, white),                     
+//                         linear-gradient(-90deg, #8501a8 -27.26%, #38b6ff 98.59%);
+//     background-origin: border-box;
+//     background-clip: content-box, border-box;
+// }
+
+
+.gradient-border{
+    
+    @media only screen and (max-width: 767px){
+        flex-wrap: wrap !important;
+        overflow-y: auto;
+    }
+}
+
+.slider-content{
+    padding: 10px;
+}
+
+// .dark-theme .slider-border {
+//     background-image: linear-gradient(black, black),                     
+//                       linear-gradient(-90deg, #8501a8 -27.26%, #38b6ff 98.59%);
+//   }
+
+@media only screen and (max-width: 767px){
+    .carousel-img{
+        width: 100% !important;
+    }
+
+    .carousel-txt{
+        width: 100% !important;
+        overflow-y: hidden !important;
+    }
+}

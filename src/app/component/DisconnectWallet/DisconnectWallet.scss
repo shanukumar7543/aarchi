@@ -1,0 +1,16 @@
+.modal-bd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .warnnig-icon {
+        font-size: 100px !important;
+        color: #cccc54;
+    }
+    .warn-txt {
+        margin-bottom: 0;
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+}

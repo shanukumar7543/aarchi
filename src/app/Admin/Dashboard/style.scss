@@ -1,0 +1,27 @@
+.content {
+  padding: 25px;
+}
+.text {
+  text-align: center;
+}
+
+// .background {
+//   background: linear-gradient(180deg, #f467ec 0%, #38b6ff 100%);
+// }
+
+.css-11xur9t-MuiPaper-root-MuiTableContainer-root{
+  box-shadow: none !important;
+}
+
+.user-icon{
+  margin-left: auto !important;
+}
+
+main.MuiBox-root.css-zxdg2z{
+  padding-left: 40px;
+
+  @media only screen and (max-width: 767px){
+    padding-left: 4px;
+    overflow-x: hidden;
+  }
+}
